@@ -220,7 +220,7 @@
                 <div class="h-8 w-px bg-emerald-300"></div>
                 <div class="text-center">
                     <span class="block text-[10px] uppercase font-extrabold text-blue-800 tracking-wider">Progress Soal</span>
-                    <span id="progress-text" class="text-2xl md:text-3xl font-black text-blue-700">1/10</span>
+                    <span id="progress-text" class="text-2xl md:text-3xl font-black text-blue-700">1/8</span>
                 </div>
             </div>
         </div>
@@ -249,7 +249,7 @@
         <section id="sec-sort" class="space-y-6">
             <div class="hc-card glass-panel p-6 md:p-8 rounded-3xl shadow-2xl border border-emerald-100 text-center relative overflow-hidden">
                 
-                <!-- Audio Narrator Help Button for Visual Impaired Students -->
+                <!-- Audio Narrator Help Button -->
                 <button onclick="readCurrentCard()" class="absolute top-5 right-5 bg-amber-100 text-amber-800 hover:bg-amber-200 p-3 rounded-2xl shadow transition flex items-center gap-2 font-bold text-sm" title="Dengarkan Narasi Lengkap">
                     <i class="fa-solid fa-volume-high text-lg"></i>
                     <span class="hidden sm:inline">Bacakan Kartu</span>
@@ -288,12 +288,12 @@
                     <!-- ASHABUL FURUD BUTTON -->
                     <button onclick="submitClassification('furud')" class="hc-badge-furud bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-bold p-6 rounded-3xl shadow-xl transform active:scale-95 transition-all text-left border-b-4 border-indigo-900 flex items-start space-x-4 group">
                         <div class="bg-white/20 p-3.5 rounded-2xl group-hover:scale-110 transition">
-                            <i class="fa-solid fa-pie-chart text-3xl text-blue-100"></i>
+                            <i class="fa-solid fa-chart-pie text-3xl text-blue-100"></i>
                         </div>
                         <div>
                             <span class="block text-xl font-black tracking-wide text-amber-200">ASHABUL FURUD</span>
                             <span class="text-xs md:text-sm text-blue-100 font-normal leading-relaxed block mt-1">
-                                Ahli waris yang memiliki **bagian pecahan pasti** (1/2, 1/4, 1/8, 2/3, 1/3, 1/6).
+                                Ahli waris yang memiliki bagian pecahan pasti (1/2, 1/4, 1/8, 2/3, 1/3, 1/6).
                             </span>
                         </div>
                     </button>
@@ -306,7 +306,7 @@
                         <div>
                             <span class="block text-xl font-black tracking-wide text-amber-200">ASHABAH</span>
                             <span class="text-xs md:text-sm text-amber-100 font-normal leading-relaxed block mt-1">
-                                Ahli waris penerima **sisa harta** setelah Ashabul Furud mengambil bagiannya.
+                                Ahli waris penerima sisa harta setelah Ashabul Furud mengambil bagiannya.
                             </span>
                         </div>
                     </button>
@@ -344,7 +344,6 @@
 
             <!-- Dynamic Scenario Card -->
             <div class="hc-card glass-panel p-6 md:p-8 rounded-3xl shadow-xl border border-emerald-200 space-y-6">
-                
                 <!-- Story Header -->
                 <div class="bg-gradient-to-r from-emerald-900 to-emerald-800 text-white p-5 rounded-2xl shadow-md flex justify-between items-start gap-4">
                     <div class="space-y-1">
@@ -361,9 +360,7 @@
                 </div>
 
                 <!-- Interactive Heir Question List -->
-                <div id="case-questions" class="space-y-4">
-                    <!-- Dynamically generated items -->
-                </div>
+                <div id="case-questions" class="space-y-4"></div>
 
                 <!-- Case Navigation Buttons -->
                 <div class="flex justify-between items-center pt-4 border-t border-slate-200">
@@ -387,16 +384,13 @@
                 </p>
             </div>
 
-            <!-- Matching Cards Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Column A: Heirs -->
                 <div class="space-y-3">
                     <h3 class="text-sm font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100 px-4 py-2 rounded-xl text-center">
                         Ahli Waris (Pilih Satu)
                     </h3>
-                    <div id="match-col-a" class="space-y-3">
-                        <!-- Dynamic items -->
-                    </div>
+                    <div id="match-col-a" class="space-y-3"></div>
                 </div>
 
                 <!-- Column B: Fraction Rules -->
@@ -404,9 +398,7 @@
                     <h3 class="text-sm font-bold uppercase tracking-wider text-indigo-800 bg-indigo-100 px-4 py-2 rounded-xl text-center">
                         Pola Bagian Pecahan
                     </h3>
-                    <div id="match-col-b" class="space-y-3">
-                        <!-- Dynamic items -->
-                    </div>
+                    <div id="match-col-b" class="space-y-3"></div>
                 </div>
             </div>
 
@@ -424,7 +416,7 @@
                 <div>
                     <h2 class="text-3xl font-black text-emerald-900 hc-text-main">Laporan Prestasi Mawaris PAI</h2>
                     <p class="text-slate-600 hc-text-sub max-w-lg mx-auto text-sm md:text-base mt-2">
-                        Selamat! Anda telah melatih kemampuan pengenalan pola (*Pattern Recognition*) dalam membedakan **Ashabul Furud** dan **Ashabah**.
+                        Selamat! Anda telah melatih kemampuan pengenalan pola (Pattern Recognition) dalam membedakan Ashabul Furud dan Ashabah.
                     </p>
                 </div>
 
@@ -460,10 +452,9 @@
         </section>
     </main>
 
-    <!-- MODAL: KAMUS WARIS & DIAGRAM SILSILAH (PATTERN GUIDE) -->
+    <!-- MODAL: KAMUS WARIS & DIAGRAM SILSILAH -->
     <div id="modal-kamus" class="fixed inset-0 bg-slate-950/70 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
-        <div class="hc-card glass-panel rounded-3xl max-w-4xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden border border-emerald-400">
-            
+        <div class="hc-card glass-panel rounded-3xl max-w-4xl w-full max-h-[90vh] flex flex-col shadow-2xl border border-emerald-400">
             <!-- Modal Header -->
             <div class="bg-emerald-950 text-white p-5 flex justify-between items-center border-b border-emerald-800">
                 <div class="flex items-center space-x-3">
@@ -478,18 +469,15 @@
                 <button onclick="closeModal('modal-kamus')" class="text-emerald-300 hover:text-white text-2xl font-bold px-3 py-1 bg-emerald-800 rounded-xl transition">&times;</button>
             </div>
             
-            <!-- Modal Scrollable Body -->
+            <!-- Modal Body -->
             <div class="p-6 overflow-y-auto space-y-6 text-sm md:text-base">
-                
-                <!-- Quick Visual Diagram of Ashabul Furud vs Ashabah -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <!-- Furud Summary Card -->
                     <div class="bg-blue-50/90 p-5 rounded-2xl border-l-4 border-blue-600 shadow-sm space-y-2">
                         <h4 class="font-extrabold text-blue-900 text-lg flex items-center gap-2">
-                            <i class="fa-solid fa-pie-chart text-blue-600"></i> Pola 1: Ashabul Furud
+                            <i class="fa-solid fa-chart-pie text-blue-600"></i> Pola 1: Ashabul Furud
                         </h4>
                         <p class="text-blue-950 text-xs md:text-sm leading-relaxed">
-                            Penerima **bagian pecahan pasti** yang telah ditetapkan ukurannya dalam Al-Qur'an (Surat An-Nisa):
+                            Penerima bagian pecahan pasti yang telah ditetapkan ukurannya dalam Al-Qur'an (Surat An-Nisa):
                         </p>
                         <div class="grid grid-cols-3 gap-1.5 text-center font-bold text-xs pt-1">
                             <span class="bg-blue-200 text-blue-900 p-1.5 rounded-lg">1/2</span>
@@ -501,13 +489,12 @@
                         </div>
                     </div>
 
-                    <!-- Ashabah Summary Card -->
                     <div class="bg-amber-50/90 p-5 rounded-2xl border-l-4 border-amber-600 shadow-sm space-y-2">
                         <h4 class="font-extrabold text-amber-900 text-lg flex items-center gap-2">
                             <i class="fa-solid fa-coins text-amber-600"></i> Pola 2: Ashabah (Sisa)
                         </h4>
                         <p class="text-amber-950 text-xs md:text-sm leading-relaxed">
-                            Penerima **seluruh sisa harta** setelah bagian Ashabul Furud diserahkan:
+                            Penerima seluruh sisa harta setelah bagian Ashabul Furud diserahkan:
                         </p>
                         <ul class="text-xs space-y-1 font-medium text-amber-900 pt-1">
                             <li>• <strong>Ashabah Binafsi:</strong> Karena dirinya sendiri (Anak LK, Cucu LK, Ayah, Saudara LK).</li>
@@ -517,7 +504,6 @@
                     </div>
                 </div>
 
-                <!-- Tabular Detailed Rules -->
                 <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
                     <table class="w-full text-left border-collapse text-xs md:text-sm">
                         <thead class="bg-emerald-900 text-white">
@@ -558,7 +544,6 @@
                 </div>
             </div>
 
-            <!-- Modal Footer -->
             <div class="p-4 bg-slate-100 border-t border-slate-200 text-right">
                 <button onclick="closeModal('modal-kamus')" class="bg-emerald-800 hover:bg-emerald-900 text-white font-extrabold px-6 py-2.5 rounded-xl shadow">
                     Paham, Tutup Panduan
@@ -574,11 +559,6 @@
     </footer>
 
     <script>
-        /* -------------------------------------------------------------
-           GAME DATA & ACCESSIBILITY LOGIC
-        ------------------------------------------------------------- */
-        
-        // Data Kartu Ahli Waris (Sorting Arena)
         const HEIR_CARDS = [
             {
                 name: "Istri",
@@ -638,7 +618,6 @@
             }
         ];
 
-        // Data Skenario Kasus (Mode 2)
         const CASE_SCENARIOS = [
             {
                 story: "Pak Budi meninggal dunia. Beliau meninggalkan harta dan ahli waris: Istri, Ibu, dan 1 Anak Laki-Laki.",
@@ -665,7 +644,6 @@
             }
         ];
 
-        // Data Matching Game (Mode 3)
         const MATCH_ITEMS = [
             { id: 1, heir: "Suami (Ada Anak)", rule: "1/4 Pecahan Pasti" },
             { id: 2, heir: "Anak Laki-Laki", rule: "Penerima Sisa (Ashabah)" },
@@ -673,7 +651,6 @@
             { id: 4, heir: "Ibu (Tidak Ada Anak)", rule: "1/3 Pecahan Pasti" }
         ];
 
-        // Global State
         let currentCardIndex = 0;
         let score = 0;
         let totalAnswered = 0;
@@ -686,22 +663,20 @@
         let selectedMatchA = null;
         let matchedCount = 0;
 
-        // Text-To-Speech Narrator Function (Indonesian language)
         function speakText(text) {
             if (!audioEnabled) return;
             if ('speechSynthesis' in window) {
                 window.speechSynthesis.cancel();
                 const utterance = new SpeechSynthesisUtterance(text);
                 utterance.lang = 'id-ID';
-                utterance.rate = 0.88; // Slower rate for special education clarity
+                utterance.rate = 0.88;
                 utterance.pitch = 1.0;
                 window.speechSynthesis.speak(utterance);
             }
         }
 
-        // Sound Effects Synthesizer using Tone.js
         function playAudioEffect(type) {
-            if (!audioEnabled) return;
+            if (!audioEnabled || typeof Tone === 'undefined') return;
             try {
                 const synth = new Tone.PolySynth(Tone.Synth).toDestination();
                 synth.volume.value = -6;
@@ -714,16 +689,12 @@
                     const clickSynth = new Tone.MembraneSynth().toDestination();
                     clickSynth.volume.value = -12;
                     clickSynth.triggerAttackRelease("C2", "16n");
-                } else if (type === 'levelUp') {
-                    synth.triggerAttackRelease(["G4", "C5", "E5", "G5", "C6"], "8n");
                 }
-            } catch (e) {
-                console.log("Audio FX error", e);
-            }
+            } catch (e) {}
         }
 
-        // Background Music Generator using Tone.js Loop Synthesizer
         function initBGM() {
+            if (typeof Tone === 'undefined') return;
             bgmSynth = new Tone.PolySynth(Tone.Synth, {
                 oscillator: { type: "triangle" },
                 envelope: { attack: 0.1, decay: 0.3, sustain: 0.4, release: 0.8 }
@@ -748,6 +719,7 @@
         }
 
         async function toggleBGM() {
+            if (typeof Tone === 'undefined') return;
             try {
                 await Tone.start();
             } catch (e) {}
@@ -771,20 +743,14 @@
             }
         }
 
-        // Render Sorting Game Card
         function renderCard() {
             const card = HEIR_CARDS[currentCardIndex];
-            
             document.getElementById('current-index-num').innerText = currentCardIndex + 1;
             document.getElementById('progress-text').innerText = `${currentCardIndex + 1}/${HEIR_CARDS.length}`;
             document.getElementById('heir-title').innerText = card.name;
             document.getElementById('heir-clue').innerText = card.clue;
             document.getElementById('heir-icon').className = `fa-solid ${card.icon} text-5xl text-emerald-700`;
-
             document.getElementById('feedback-box').classList.add('hidden');
-
-            // Speech narration
-            speakText(`Kartu ${currentCardIndex + 1}: ${card.name}. Petunjuk: ${card.clue}`);
         }
 
         function readCurrentCard() {
@@ -792,7 +758,6 @@
             speakText(`${card.name}. Petunjuk pola waris: ${card.clue}`);
         }
 
-        // Process Answer Classification
         function submitClassification(userChoice) {
             playAudioEffect('click');
             const card = HEIR_CARDS[currentCardIndex];
@@ -803,24 +768,19 @@
             const feedbackText = document.getElementById('feedback-text');
 
             const isCorrect = (userChoice === card.type);
-
             feedbackBox.classList.remove('hidden', 'bg-emerald-50', 'bg-rose-50', 'border-emerald-400', 'border-rose-400', 'text-emerald-950', 'text-rose-950');
 
             if (isCorrect) {
                 score += 10;
                 comboStreak++;
                 playAudioEffect('correct');
-                
                 feedbackBox.classList.add('bg-emerald-50', 'border-emerald-400', 'text-emerald-950');
                 feedbackIconBg.className = 'p-3 rounded-2xl bg-emerald-600 text-white text-2xl flex-shrink-0';
                 feedbackIcon.className = 'fa-solid fa-check';
                 feedbackTitle.innerText = "Tepat Sekali! (Pola Sesuai)";
-
-                // Trigger confetti visual reward
-                try {
+                if (typeof confetti === 'function') {
                     confetti({ particleCount: 40, spread: 70, origin: { y: 0.7 } });
-                } catch(e){}
-
+                }
             } else {
                 comboStreak = 0;
                 playAudioEffect('wrong');
@@ -830,7 +790,6 @@
                 feedbackTitle.innerText = "Kurang Tepat!";
             }
 
-            // Update combo badge
             const comboBadge = document.getElementById('combo-badge');
             if (comboStreak >= 2) {
                 comboBadge.classList.remove('hidden');
@@ -842,7 +801,6 @@
             feedbackText.innerText = card.explanation;
             totalAnswered++;
             updateStatsDisplay();
-
             speakText(`${isCorrect ? "Tepat sekali!" : "Kurang tepat."} ${card.explanation}`);
         }
 
@@ -851,12 +809,11 @@
                 currentCardIndex++;
                 renderCard();
             } else {
-                speakText("Selamat! Anda telah menyelesaikan seluruh sesi arena sortir pola ahli waris.");
+                speakText("Selamat! Anda telah menyelesaikan seluruh sesi sortir pola.");
                 switchTab('tab-rekap');
             }
         }
 
-        // Render Case Detective Simulator
         function renderCaseScenario() {
             const currentCase = CASE_SCENARIOS[currentCaseIndex];
             document.getElementById('case-num').innerText = currentCaseIndex + 1;
@@ -895,13 +852,13 @@
 
             if (userChoice === item.correct) {
                 resEl.classList.add('bg-emerald-100', 'text-emerald-900');
-                resEl.innerHTML = `<i class="fa-solid fa-check mr-1 text-emerald-600"></i> Benar! Kedudukan Pola: ${item.portion}`;
+                resEl.innerHTML = `<i class="fa-solid fa-check mr-1 text-emerald-600"></i> Benar! Kedudukan: ${item.portion}`;
                 speakText(`Benar. ${item.heir} berkedudukan sebagai ${item.portion}`);
                 score += 15;
             } else {
                 resEl.classList.add('bg-rose-100', 'text-rose-900');
-                resEl.innerHTML = `<i class="fa-solid fa-xmark mr-1 text-rose-600"></i> Salah. Jawaban yang benar: ${item.portion}`;
-                speakText(`Salah. Kedudukan yang benar adalah ${item.portion}`);
+                resEl.innerHTML = `<i class="fa-solid fa-xmark mr-1 text-rose-600"></i> Salah. Jawaban: ${item.portion}`;
+                speakText(`Salah. Jawaban yang benar adalah ${item.portion}`);
             }
             updateStatsDisplay();
         }
@@ -915,7 +872,6 @@
             }
         }
 
-        // Mode 3: Matching Game Logic
         function renderMatchingGame() {
             const colA = document.getElementById('match-col-a');
             const colB = document.getElementById('match-col-b');
@@ -970,8 +926,8 @@
 
                 if (matchedCount === MATCH_ITEMS.length) {
                     document.getElementById('match-feedback').classList.remove('hidden');
-                    speakText("Luar biasa! Seluruh pasangan berhasil dicocokkan dengan sempurna.");
-                    try { confetti({ particleCount: 50 }); } catch(e){}
+                    speakText("Luar biasa! Seluruh pasangan berhasil dicocokkan.");
+                    if (typeof confetti === 'function') confetti({ particleCount: 50 });
                 }
             } else {
                 playAudioEffect('wrong');
@@ -980,7 +936,6 @@
             updateStatsDisplay();
         }
 
-        // Update Dashboard Statistics
         function updateStatsDisplay() {
             document.getElementById('score-display').innerText = score;
             const accuracy = totalAnswered > 0 ? Math.round((score / (totalAnswered * 10)) * 100) : 100;
@@ -995,7 +950,6 @@
             document.getElementById('rekap-badge').innerText = title;
         }
 
-        // Accessibility Controls
         function toggleAudio() {
             audioEnabled = !audioEnabled;
             document.getElementById('status-audio').innerText = audioEnabled ? "ON" : "OFF";
@@ -1022,7 +976,6 @@
             document.documentElement.style.fontSize = `${baseSize}px`;
         }
 
-        // Tab Navigation
         function switchTab(tabId) {
             document.getElementById('sec-sort').classList.add('hidden');
             document.getElementById('sec-case').classList.add('hidden');
@@ -1050,11 +1003,9 @@
             }
         }
 
-        // Modals Logic
         function openModal(id) { document.getElementById(id).classList.remove('hidden'); }
         function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
 
-        // Print/Save Certificate Function
         function printCertificate() {
             const name = document.getElementById('student-name').value.trim() || "Siswa PAI Kelas XII SMK";
             const printWin = window.open('', '_blank');
@@ -1096,7 +1047,6 @@
             printWin.print();
         }
 
-        // Initialize Application
         window.onload = function() {
             renderCard();
             updateStatsDisplay();
